@@ -258,7 +258,7 @@ correct_url = ->
 show_flashes = (flashes) ->
   $.each flash_types, ->
     if flashes and flashes[this]
-      $("##{this}").html flashes[this]
+      $("##{this} p").html flashes[this]
       $("##{this}").show()
       $(document).trigger 'ajaxify:flash_displayed', [this, flashes[this] ]
 
